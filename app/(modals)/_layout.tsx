@@ -18,9 +18,9 @@ export default function Layout() {
 
   const router = useRouter();
 
-  // redirect user to senwisetoo.com when the user click on the logo
+  // redirect user to project website when the user click on the logo
   const handleRedictToWebsite = () => {
-    router.push('https://www.senwisetool.com');
+    router.push('/'); // Replace with your website URL when available
   }
 
   return (

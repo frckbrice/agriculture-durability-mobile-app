@@ -1,5 +1,5 @@
 import Constants from "expo-constants";
-
+import { logger } from "@/lib/logger";
 
 // get the local IP address at run time.
 const uri =
@@ -11,7 +11,7 @@ export const API_URL = process.env.EXPO_PUBLIC_PROD_API_URL;
 
 
 export const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
-console.log("from constant runtime uri: ", API_URL);
+logger.debug("constants runtime API_URL resolved");
 
 
 export const NAV_THEME = {

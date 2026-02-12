@@ -43,9 +43,9 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="senwisetool"/>
-        <data android:scheme="com.senima.senwisetool"/>
-        <data android:scheme="exp+senwisetool"/>
+        <data android:scheme="agriculture-durability-mobile-app"/>
+        <data android:scheme="com.senima.agriculturedurability"/>
+        <data android:scheme="exp+agriculture-durability-mobile-app"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>

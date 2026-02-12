@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'Senwisetool'
+rootProject.name = 'AgricultureDurability'
 
 dependencyResolutionManagement {
   versionCatalogs {

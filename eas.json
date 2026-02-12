@@ -3,12 +3,24 @@
     "version": ">= 3.0.0",
     "appVersionSource": "remote"
   },
-  "build": { 
-    "android": {
-      "distribution": "store",
-      "autoIncrement": true
+  "build": {
+    "base": {
+      "node": "20.11.0",
+      "yarn": "1.22.22",
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "${GOOGLE_MAPS_API_KEY}",
+        "EXPO_PUBLIC_PROD_API_URL": "${EXPO_PUBLIC_PROD_API_URL}",
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "${EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY}",
+        "EXPO_PUBLIC_AWS_ACCESS_KEY_ID": "${EXPO_PUBLIC_AWS_ACCESS_KEY_ID}",
+        "EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY": "${EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY}",
+        "EXPO_PUBLIC_AWS_REGION": "eu-west-1",
+        "EXPO_PUBLIC_AWS_S3_BUCKET_NAME": "${EXPO_PUBLIC_AWS_S3_BUCKET_NAME}",
+        "JWT_SECRETE": "${JWT_SECRETE}",
+        "JWT_TOKEN_EXPIRE_AFTER": "1d"
+      }
     },
     "preview_debug": {
+      "extends": "base",
       "android": {
         "distribution": "internal",
         "gradleCommand": ":app:assembleDebug"
@@ -16,39 +28,24 @@
       "ios": {
         "simulator": true,
         "buildConfiguration": "Debug"
-      }
+      },
+      "channel": "preview"
     },
     "development": {
+      "extends": "base",
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "development"
     },
     "preview": {
+      "extends": "base",
       "distribution": "internal",
-      "env": {
-        "GOOGLE_MAPS_API_KEY": "${GOOGLE_MAPS_API_KEY}",
-        "EXPO_PUBLIC_PROD_API_URL": "${PROD_API_URL}",
-        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "${CLERK_PUBLISHABLE_KEY}",
-        "EXPO_PUBLIC_AWS_ACCESS_KEY_ID": "${AWS_SECRET_KEY_ID}",
-        "EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY": "$(AWS_SECRET_KEY)",
-        "EXPO_PUBLIC_AWS_REGION": "eu-west-1",
-        "EXPO_PUBLIC_AWS_S3_BUCKET_NAME": "${AWS_BUCKET_NAME}",
-        "JWT_SECRETE": "${JWT_SECRETE}",
-        "JWT_TOKEN_EXPIRE_AFTER": "1d"
-      }
+      "channel": "preview"
     },
     "production": {
+      "extends": "base",
       "autoIncrement": true,
-      "env": {
-        "GOOGLE_MAPS_API_KEY": "${GOOGLE_MAPS_API_KEY}",
-        "EXPO_PUBLIC_PROD_API_URL": "${PROD_API_URL}",
-        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "${CLERK_PUBLISHABLE_KEY}",
-        "EXPO_PUBLIC_AWS_ACCESS_KEY_ID": "${AWS_SECRET_KEY_ID}",
-        "EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY": "$(AWS_SECRET_KEY)",
-        "EXPO_PUBLIC_AWS_REGION": "eu-west-1",
-        "EXPO_PUBLIC_AWS_S3_BUCKET_NAME": "${AWS_BUCKET_NAME}",
-        "JWT_SECRETE": "${JWT_SECRETE}",
-        "JWT_TOKEN_EXPIRE_AFTER": "1d"
-      }
+      "channel": "production"
     }
   },
   "submit": {

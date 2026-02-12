@@ -147,7 +147,7 @@ export function RootLayout() {
                     name="privacy-policy"
                     options={{
                         // headerShown: false,
-                        headerTitle: 'Senwisetool Privacy Policy',
+                        headerTitle: 'Agriculture Durability Privacy Policy',
                         headerStyle: {
                             backgroundColor: Colors.primary
                         },

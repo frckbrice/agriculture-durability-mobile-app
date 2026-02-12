@@ -137,12 +137,12 @@ export const transmissionInitialValues = {
 }
 
 export const transmisionMockvalues = {
-    "carrierSignature": "file:///data/user/0/com.bricefrck.senwisetool/cache/ReactNative-snapshot-image2097841492535461481.jpg", "driverName": "Brice",
-    "ministrySignature": "file:///data/user/0/com.bricefrck.senwisetool/cache/ReactNative-snapshot-image6079246352210297903.jpg", "numberOfBags": "17",
+    "carrierSignature": "file:///data/user/0/com.senima.agriculturedurability/cache/ReactNative-snapshot-image2097841492535461481.jpg", "driverName": "Brice",
+    "ministrySignature": "file:///data/user/0/com.senima.agriculturedurability/cache/ReactNative-snapshot-image6079246352210297903.jpg", "numberOfBags": "17",
     "productQuality": "Good",
     "recipientName": "Avom",
     "senderName": "",
-    "senderSignature": "file:///data/user/0/com.bricefrck.senwisetool/cache/ReactNative-snapshot-image6334196838283550338.jpg", "vehicleRegistration": "Tl678"
+    "senderSignature": "file:///data/user/0/com.senima.agriculturedurability/cache/ReactNative-snapshot-image6334196838283550338.jpg", "vehicleRegistration": "Tl678"
 }
 
 export const sampleReceipts = {
