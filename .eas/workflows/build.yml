@@ -1,0 +1,46 @@
+# EAS Build: trigger builds on version tags or manual dispatch
+# Link GitHub repo in EAS project settings to trigger on push/tags
+name: EAS Build
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        type: choice
+        description: EAS build profile
+        required: true
+        default: preview
+        options:
+          - development
+          - preview
+          - preview_debug
+          - production
+      platform:
+        type: choice
+        description: Platform
+        required: true
+        options:
+          - all
+          - android
+          - ios
+  push:
+    tags:
+      - "v*"
+defaults:
+  tools:
+    node: "20"
+    yarn: "1.22.22"
+jobs:
+  build_android:
+    name: Build Android
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.platform == 'all' || inputs.platform == 'android' }}
+    type: build
+    params:
+      platform: android
+      profile: ${{ inputs.profile || 'production' }}
+  build_ios:
+    name: Build iOS
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.platform == 'all' || inputs.platform == 'ios' }}
+    type: build
+    params:
+      platform: ios
+      profile: ${{ inputs.profile || 'production' }}

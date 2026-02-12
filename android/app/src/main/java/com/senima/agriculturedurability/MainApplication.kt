@@ -1,4 +1,4 @@
-package com.senima.senwisetool
+package com.senima.agriculturedurability
 
 import android.app.Application
 import android.content.res.Configuration

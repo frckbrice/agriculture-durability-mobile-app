@@ -22,7 +22,7 @@ export default function MaketFunctionalities() {
 
     return (
         <SafeAreaView className="flex-1  justify-start px-10 m-0 ">
-            {/* <Text className="text-2xl font-bold mb-4 text-center">SenwiseTool Traceability Menu page</Text> */}
+            {/* <Text className="text-2xl font-bold mb-4 text-center">Agriculture Durability Traceability Menu page</Text> */}
 
             {/* <View>
                 <Markets setMarketProps={setMarketProps} />

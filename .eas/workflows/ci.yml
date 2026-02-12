@@ -1,0 +1,21 @@
+# CI: lint and test on PR/push to main or develop
+name: CI
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+defaults:
+  tools:
+    node: "20"
+    yarn: "1.22.22"
+jobs:
+  lint-and-test:
+    name: Lint and test
+    steps:
+      - uses: eas/checkout
+      - uses: eas/install_node_modules
+      - name: Lint
+        run: yarn lint
+      - name: Run tests
+        run: yarn test:ci

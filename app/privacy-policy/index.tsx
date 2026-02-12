@@ -11,18 +11,18 @@ const PrivacyPolicyScreen = () => {
         <SafeAreaView className="flex-1  p-4 ">
             <ScrollView className="flex-1 ">
                 <View className="mb-6">
-                    <Text className="text-2xl font-bold text-center mb-2">Senwisetool Privacy Policy</Text>
+                    <Text className="text-2xl font-bold text-center mb-2">Agriculture Durability Privacy Policy</Text>
                     <Text className="text-sm text-gray-600 text-center">Last updated: 01/02/2025</Text>
                 </View>
 
                 <Text className="text-base mb-4">
-                    Welcome to Senwisetool. Your privacy is our priority. This privacy policy explains how we collect, use, and protect your data when you use our application.
+                    Welcome to Agriculture Durability. Your privacy is our priority. This privacy policy explains how we collect, use, and protect your data when you use our application.
                 </Text>
 
                 <View className="mb-6">
                     <Text className="text-lg font-bold mb-2"> Data Collection</Text>
                     <Text className="text-base">
-                        Senwisetool only collects device location data in the following cases:
+                        Agriculture Durability only collects device location data in the following cases:
                     </Text>
                     <View className="ml-4 mt-2">
                         <Text className="text-base mb-1">• When recording farmer(s) or plantation(s) position</Text>
@@ -55,7 +55,7 @@ const PrivacyPolicyScreen = () => {
                 <View className="mb-6">
                     <Text className="text-lg font-bold mb-2"> Data Sharing</Text>
                     <Text className="text-base">
-                        Senwisetool does not share any location data with third parties, including other applications, services, or companies. However, in certain legal situations (e.g., legal obligation, authorities' request), we may be required to disclose information if required by law.
+                        Agriculture Durability does not share any location data with third parties, including other applications, services, or companies. However, in certain legal situations (e.g., legal obligation, authorities' request), we may be required to disclose information if required by law.
                     </Text>
                 </View>
 
@@ -96,7 +96,7 @@ const PrivacyPolicyScreen = () => {
                 <View className="mb-6">
                     <Text className="text-lg font-bold mb-2"> Cookies and Tracking Technologies</Text>
                     <Text className="text-base">
-                        Senwisetool does not use cookies, trackers, or other tracking technologies to collect data about application usage.
+                        Agriculture Durability does not use cookies, trackers, or other tracking technologies to collect data about application usage.
                     </Text>
                 </View>
 
@@ -128,7 +128,7 @@ const PrivacyPolicyScreen = () => {
                 </View>
 
                 <Text className="text-base text-center mt-4 ">
-                    Thank you for using Senwisetool and trusting us to protect your data!
+                    Thank you for using Agriculture Durability and trusting us to protect your data!
                 </Text>
 
                 <TouchableOpacity onPress={() => router.push('/')}>

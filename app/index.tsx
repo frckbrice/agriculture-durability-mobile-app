@@ -79,7 +79,7 @@ export default function Index() {
                     <View className="relative mt-16">
                         <Text className="text-3xl  font-bold text-center">
                             Discover Endless Possibilities with{" "}
-                            <Text className="">Senwisetool</Text>
+                            <Text className="">Agriculture Durability</Text>
                         </Text>
 
                         {/* design of the image under the name */}
