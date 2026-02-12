@@ -1,0 +1,386 @@
+// {
+//   "expo": {
+//     "name": "Senwisetool",
+//     "slug": "senwisetool",
+//     "version": "1.0.0",
+//     "orientation": "portrait",
+//     "icon": "./assets/images/icon.png",
+//     "scheme": "senwisetool",
+//     "userInterfaceStyle": "automatic",
+//     "splash": {
+//       "image": "./assets/images/splash.png",
+//       "resizeMode": "contain",
+//       "backgroundColor": "#ffffff"
+//     },
+//     "ios": {
+//       "supportsTablet": true,
+//       "infoPlist": {
+//         "NSLocationWhenInUseUsageDescription": "Allow the app to access your location while in use.",
+//         "NSLocationAlwaysUsageDescription": "Allow the app to always access your location.",
+//         "NSCameraUsageDescription": "Allow the app to access the camera for capturing photos.",
+//         "NSPhotoLibraryUsageDescription": "Allow the app to access your photo library for uploading images."
+//       },
+//       "icon": {
+//         "light": "./assets/images/Light.png",
+//         "dark": "./assets/images/Light.png"
+//       }
+//     },
+//     "android": {
+//       "adaptiveIcon": {
+//         "foregroundImage": "./assets/images/adaptive-icon.png",
+//         "backgroundColor": "#ffffff"
+//       },
+//       "permissions": [
+//         "android.permission.READ_EXTERNAL_STORAGE",
+//         "android.permission.WRITE_EXTERNAL_STORAGE",
+//         "android.permission.ACCESS_FINE_LOCATION",
+//         "android.permission.ACCESS_COARSE_LOCATION",
+//         "android.permission.MEDIA_LIBRARY",
+//         "android.permission.CAMERA",
+//         "android.permission.INTERNET",
+//         "android.permission.ACCESS_BACKGROUND_LOCATION"
+//       ],
+//       "versionCode": 1,
+//       "package": "com.senima.senwisetool",
+//       "config": {
+//         "googleMaps": {
+//           "apiKey": "AIzaSyDiMdgsAagKhBVofoLxkR8owg_gcZN2xzk" // Changed to match eas.json
+//         }
+//       }
+//     },
+//     "web": {
+//       "bundler": "metro",
+//       "output": "server"
+//     },
+//     "extra": {
+//       "eas": {
+//         "projectId": "8c236a82-bbd9-4e6e-afe6-26cb9935ad08"
+//       }
+//     },
+//     "plugins": [
+//       "expo-router",
+//       "expo-asset",
+//       [
+//         "expo-splash-screen",
+//         {
+//           "backgroundColor": "#ffffff",
+//           "image": "./assets/images/splash.png",
+//           "imageWidth": 200,
+//           "resizeMode": "contain"
+//         }
+//       ],
+//       [
+//         "expo-location",
+//         {
+//           "locationAlwaysAndWhenInUsePermission": "Allow Senwisetool to access your location in the background.",
+//           "locationWhenInUsePermission": "Allow Senwisetool to access your location while the app is in use.",
+//           "notificationPermission": "Allow Senwisetool to send you notifications.",
+//           "isAndroidForegroundServiceEnabled": true,
+//           "locationAlwaysPermission": "Allow $(PRODUCT_NAME) to use your location in the background.",
+//           "isIosBackgroundLocationEnabled": true,
+//           "isAndroidBackgroundLocationEnabled": true
+//         }
+//       ],
+//       "expo-file-system",
+//       "expo-document-picker",
+//       [
+//         "expo-media-library",
+//         {
+//           "photosPermission": "Allow Senwisetool to access your photos.",
+//           "savePhotosPermission": "Allow Senwisetool to save photos.",
+//           "isAccessMediaLocationEnabled": true
+//         }
+//       ],
+//       [
+//         "react-native-share",
+//         {
+//           "ios": ["fb", "instagram", "twitter", "tiktoksharesdk"],
+//           "android": [
+//             "com.facebook.katana",
+//             "com.instagram.android",
+//             "com.twitter.android",
+//             "com.zhiliaoapp.musically"
+//           ]
+//         }
+//       ]
+//     ]
+//   }
+// }
+
+// {
+//   "expo": {
+//     "name": "Senwisetool",
+//     "slug": "senwisetool",
+//     "version": "1.0.0",
+//     "orientation": "portrait",
+//     "icon": "./assets/images/icon.png",
+//     "scheme": "senwisetool",
+//     "userInterfaceStyle": "automatic",
+//     "splash": {
+//       "image": "./assets/images/splash.png",
+//       "resizeMode": "contain",
+//       "backgroundColor": "#ffffff"
+//     },
+//     "ios": {
+//       "supportsTablet": true,
+//       "infoPlist": {
+//         "NSLocationWhenInUseUsageDescription": "Allow the app to access your location while in use.",
+//         "NSLocationAlwaysUsageDescription": "Allow the app to always access your location.",
+//         "NSCameraUsageDescription": "Allow the app to access the camera for capturing photos.",
+//         "NSPhotoLibraryUsageDescription": "Allow the app to access your photo library for uploading images."
+//       },
+//       "icon": {
+//         "light": "./assets/images/Light.png",
+//         "dark": "./assets/images/Light.png"
+//       }
+//     },
+//     "android": {
+//       "adaptiveIcon": {
+//         "foregroundImage": "./assets/images/adaptive-icon.png",
+//         "backgroundColor": "#ffffff"
+//       },
+//       "permissions": [
+//         "android.permission.READ_EXTERNAL_STORAGE",
+//         "android.permission.WRITE_EXTERNAL_STORAGE",
+//         "android.permission.ACCESS_FINE_LOCATION",
+//         "android.permission.ACCESS_COARSE_LOCATION",
+//         "android.permission.MEDIA_LIBRARY",
+//         "android.permission.CAMERA",
+//         "android.permission.INTERNET",
+//         "android.permission.ACCESS_BACKGROUND_LOCATION"
+//       ],
+//       "versionCode": 1,
+//       "package": "com.senima.senwisetool",
+//       "config": {
+//         "googleMaps": {
+//           "apiKey": "AIzaSyDiMdgsAagKhBVofoLxkR8owg_gcZN2xzk"
+//         }
+//       },
+//       "minSdkVersion": 21,
+//       "targetSdkVersion": 33,
+//       "softwareKeyboardLayoutMode": "pan",
+//       "jsEngine": "hermes"
+//     },
+//     "web": {
+//       "bundler": "metro",
+//       "output": "server"
+//     },
+//     "extra": {
+//       "eas": {
+//         "projectId": "8c236a82-bbd9-4e6e-afe6-26cb9935ad08"
+//       }
+//     },
+//     "plugins": [
+//       "expo-router",
+//       "expo-asset",
+//       [
+//         "expo-splash-screen",
+//         {
+//           "backgroundColor": "#ffffff",
+//           "image": "./assets/images/splash.png",
+//           "imageWidth": 200,
+//           "resizeMode": "contain"
+//         }
+//       ],
+//       [
+//         "expo-location",
+//         {
+//           "locationAlwaysAndWhenInUsePermission": "Allow Senwisetool to access your location in the background.",
+//           "locationWhenInUsePermission": "Allow Senwisetool to access your location while the app is in use.",
+//           "notificationPermission": "Allow Senwisetool to send you notifications.",
+//           "isAndroidForegroundServiceEnabled": true,
+//           "locationAlwaysPermission": "Allow $(PRODUCT_NAME) to use your location in the background.",
+//           "isIosBackgroundLocationEnabled": true,
+//           "isAndroidBackgroundLocationEnabled": true
+//         }
+//       ],
+//       "expo-file-system",
+//       "expo-document-picker",
+//       [
+//         "expo-media-library",
+//         {
+//           "photosPermission": "Allow Senwisetool to access your photos.",
+//           "savePhotosPermission": "Allow Senwisetool to save photos.",
+//           "isAccessMediaLocationEnabled": true
+//         }
+//       ],
+//       [
+//         "react-native-share",
+//         {
+//           "ios": ["fb", "instagram", "twitter", "tiktoksharesdk"],
+//           "android": [
+//             "com.facebook.katana",
+//             "com.instagram.android",
+//             "com.twitter.android",
+//             "com.zhiliaoapp.musically"
+//           ]
+//         }
+//       ],
+//       [
+//         "expo-build-properties",
+//         {
+//           "android": {
+//             "compileSdkVersion": 33,
+//             "targetSdkVersion": 33,
+//             "packagingOptions": {
+//               "pickFirst": [
+//                 "lib/armeabi-v7a/libc++_shared.so",
+//                 "lib/arm64-v8a/libc++_shared.so",
+//                 "lib/x86/libc++_shared.so",
+//                 "lib/x86_64/libc++_shared.so"
+//               ]
+//             }
+//           }
+//         }
+//       ]
+//     ],
+//     "runtimeVersion": {
+//       "policy": "sdkVersion"
+//     },
+//     "updates": {
+//       "enabled": true,
+//       "fallbackToCacheTimeout": 0
+//     }
+//   }
+// }
+
+{
+  "expo": {
+    "name": "Senwisetool",
+    "slug": "senwisetool",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "senwisetool",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Allow the app to access your location while in use.",
+        "NSLocationAlwaysUsageDescription": "Allow the app to always access your location.",
+        "NSCameraUsageDescription": "Allow the app to access the camera for capturing photos.",
+        "NSPhotoLibraryUsageDescription": "Allow the app to access your photo library for uploading images."
+      },
+      "icon": {
+        "light": "./assets/images/Light.png",
+        "dark": "./assets/images/Light.png"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.MEDIA_LIBRARY",
+        "android.permission.CAMERA",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ],
+      "versionCode": 2,
+      "package": "com.senima.senwisetool",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDiMdgsAagKhBVofoLxkR8owg_gcZN2xzk"
+        }
+      },
+      "minSdkVersion": 21,
+      "targetSdkVersion": 34,
+      "allowBackup": true,
+      "usesCleartextTraffic": true,
+      "softwareKeyboardLayoutMode": "pan",
+      "jsEngine": "hermes"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "server"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8c236a82-bbd9-4e6e-afe6-26cb9935ad08"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./assets/images/splash.png",
+          "imageWidth": 200,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Senwisetool to access your location in the background.",
+          "locationWhenInUsePermission": "Allow Senwisetool to access your location while the app is in use.",
+          "notificationPermission": "Allow Senwisetool to send you notifications.",
+          "isAndroidForegroundServiceEnabled": true,
+          "locationAlwaysPermission": "Allow $(PRODUCT_NAME) to use your location in the background.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      "expo-file-system",
+      "expo-document-picker",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Senwisetool to access your photos.",
+          "savePhotosPermission": "Allow Senwisetool to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "react-native-share",
+        {
+          "ios": ["fb", "instagram", "twitter", "tiktoksharesdk"],
+          "android": [
+            "com.facebook.katana",
+            "com.instagram.android",
+            "com.twitter.android",
+            "com.zhiliaoapp.musically"
+          ]
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "ndkVersion": "23.1.7779620",
+            "packagingOptions": {
+              "pickFirst": [
+                "lib/armeabi-v7a/libc++_shared.so",
+                "lib/arm64-v8a/libc++_shared.so",
+                "lib/x86/libc++_shared.so",
+                "lib/x86_64/libc++_shared.so"
+              ]
+            }
+          }
+        }
+      ]
+    ],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
+    }
+  }
+}

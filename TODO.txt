@@ -1,0 +1,34 @@
+- organize the collected data by project type
+- create training collection data form of training
+- create receipt collection data form of receipt
+- create market summary collection data form of market
+- generate a transmission file from market summary
+- generate a 
+- reorgamise the pages styling
+- fetch the uploaded files data for administrative workspace
+- organize the setting page for the administrative workspace
+- try to generate a base map.
+
+--------- done
+
+- get the urls for the images and documents.
+- reajust the company image size on the pdfs generated
+
+------- done
+
+- handle the fact that the upload component should be Available
+ only when the pdf url is generated (AccompanyingSheet, transmissionSheet)
+- handle optimal fetching to avoid useless requests.
+-Handle App Background/Foreground Events Use AppState to
+  monitor when the app comes to the foreground, and re-check 
+  location permissions.
+-Display a Custom Splash Screen While waiting for permissions, 
+  show a custom splash screen to maintain a user-friendly experience.
+-Test on Devices Test both Android and iOS devices to ensure 
+the behavior aligns with platform-specific settings.
+- check how to rename traceability uploaded documents.
+- reduce duplicate components: inspection_edit, inspect_summary, mapping_edit, training_edit, draft and sent.
+- Futur : add the possibility to show the first location when taking
+ farm perimeter coordinates.
+
+ -- add modules to training as a dropdown for choice.
